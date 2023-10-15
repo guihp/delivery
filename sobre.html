@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Delivery</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <div class="bg-top sobre"></div>
+<!--Construinddo o header-->
+    <header class="width-fix mt-3">
+        <div class="card">
+
+            <div class="d-flex">
+
+                <a href="./index.html" class="container-voltar">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+
+                <div class="infos text-center">
+                    <h1 class="mb-0">Sobre a loja</h1>
+                </div>
+
+            </div>
+        </div>
+    </header>
+<!--Construindo o sobre a loja-->
+    <section class="width-fix mt-5 mb-4">
+        <div class="card">
+
+            <div class="d-flex">
+
+                <div class="container-img-sobre" style="background-image: url('./img/logo.png'); background-size: 80%;"></div>
+
+                <div class="infos">
+                    <h1 class="title-sobre"><b>Pizzaria Maluca</b></h1>
+                    <div class="infos-sub">
+                        <p class="sobre mb-2">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsam quia eaque voluptates voluptatem nihil repellat fugiat, iure, qui recusandae minima quibusdam commodi quod dolor facilis. Vero cupiditate accusantium similique! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati quos, nisi odit fuga assumenda doloribus laudantium maxime, alias architecto sint iste vitae quae pariatur laborum distinctio magnam unde. Dicta, odio?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+<!--Construindo o endereço da loja-->
+    <section class="lista width-fix mt-5 pb-5">
+
+        <div class="container-group mb-5">
+            <p class="title-categoria mb-0">
+                <i class="fas fa-map-marker-alt">&nbsp; <b>Endereço</b></i>
+            </p>
+            <div class="card mt-2">
+                <p class="normal-text mb-0">Rua Minha rua , 999 - Meu Bairro, Minha cidade-Minha capital</p>
+            </div>
+        </div>
+
+        <div class="container-group mb-5">
+            <p class="title-categoria mb-0">
+                <i class="fas fa-clock">&nbsp; <b>Horário de funcionamento</b></i>
+            </p>
+
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Segunda a Sexta</b></p>
+                <p class="normal-text mb-0">18:00 às 23:00</p>
+            </div>
+
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Sabado e Domingo</b></p>
+                <p class="normal-text mb-0">18:00 às 00:00</p>
+            </div>
+        </div>
+
+        <div class="container-group mb-5">
+            <p class="title-categoria mb-0">
+                <i class="fas fa-coins">&nbsp; <b>Formas de pagamento</b></i>
+            </p>
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Crédito</b></p>
+            </div>
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Débito</b></p>
+            </div>
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Dinheiro</b></p>
+            </div>
+            <div class="card mt-2">
+                <p class="normal-text mb-0"><b>Pix</b></p>
+            </div>
+        </div>
+    </section>
+
+    <a href="./index.html" class="btn btn-yellow btn-full voltar">
+        Voltar para o cardápio
+    </a>
+<!--Construindo o menu quando a loja estiver fechada-->    
+    <section class="menu-bottom disabled hidden" id="menu-bottom-closed">
+        <p class="mb-0"><b>Loja fechada no momento.</b></p>
+    </section>
+
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/item.js"></script>
+</body>
+</html>

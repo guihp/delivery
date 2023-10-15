@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Delivery</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+<body>
+    <div class="bg-top pedido"></div>
+<!--Construinddo o header-->
+    <header class="width-fix mt-3">
+        <div class="card">
+
+            <div class="d-flex">
+
+                <a href="./index.html" class="container-voltar">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+
+                <div class="infos text-center">
+                    <h1 class="mb-0">Acompanhar pedido</h1>
+                </div>
+
+            </div>
+        </div>
+    </header>
+<!--Contruindo o pedido não realizado-->
+    <section class="pedido width-fix mt-4 hidden">
+        <div class="card card-status-pedido">
+            <div class="img-icon-details">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Nenhum pedido realizado</b></p>
+                <span class="text mb-0">Faça um pedido e o status dele aparecerá aqui</span>
+            </div>
+        </div>
+    </section>
+<!--Construindo o detalhes do pedido-->
+    <section class="pedido width-fix mt-4">
+        
+        <div class="card card-status-pedido mb-4">
+            <div class="detalhes-produto">
+                <div class="infos-produto">
+                    <p class="name-total mb-0"><b>Total</b></p>
+                    <p class="price-total mb-0"><b>R$ 101,50</b></p>
+                </div>
+            </div>
+            <div class="detalhes-produto-acoes">
+                <i class="fab fa-whatsapp"></i>
+                <p class="mb-0 mt-1">Mensagem</p>
+            </div>
+            <div class="detalhes-produto-acoes">
+                <i class="far fa-file-alt"></i>
+                <p class="mb-0 mt-1">Ver pedido</p>
+            </div>
+        </div>
+
+        <div class="card card-status-pedido mt-2  cancelado">
+            <div class="img-icon-details">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Pedido cancelado!</b></p>
+                <span class="text mb-0">O restaurante cancelou o seu pedido. Entre em contato para mais informações</span>
+            </div>
+        </div> 
+
+        <div class="card card-status-pedido mt-2 active">
+            <div class="img-icon-details">
+                <i class="fas fa-clock"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Pedido enviado</b></p>
+                <span class="text mb-0">Aguardadno a confirmação da loja</span>
+            </div>
+        </div> 
+
+        <div class="card card-status-pedido mt-2 pending">
+            <div class="img-icon-details">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Preparando</b></p>
+                <span class="text mb-0">Preparando o pedido</span>
+            </div>
+        </div> 
+
+        <div class="card card-status-pedido mt-2 pending">
+            <div class="img-icon-details">
+                <i class="fas fa-motorcycle"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Indo até você</b></p>
+                <span class="text mb-0">Seu pedido está a caminho</span>
+            </div>
+        </div> 
+
+        <div class="card card-status-pedido mt-2 pending">
+            <div class="img-icon-details">
+                <i class="fas fa-box"></i>
+            </div>
+            <div class="infos">
+                <p class="name mb-1"><b>Pronto para retirada</b></p>
+                <span class="text mb-0">Seu pedido está pronto</span>
+            </div>
+        </div> 
+
+
+    </section>
+
+<!--Construindo o menu-->    
+    <section class="menu-bottom" id="menu-bottom">
+
+        <a href="./index.html" class="menu-bottom-item ">
+            <i class="fas fa-book-open"></i>&nbsp; Cardápio
+        </a>
+
+        <a href="./pedido.html" class="menu-bottom-item active">
+            <i class="fas fa-utensils"></i>&nbsp; Pedido
+        </a>
+
+        <a href="./carrinho.html" class="menu-bottom-item ">
+            <span class="badge-total-carrinho">2</span>
+            <!-- <i class="fas fa-shopping-cart"></i>--> Carrinho 
+        </a>
+    </section>    
+
+<!--Construindo o menu quando a loja estiver fechada-->    
+    <section class="menu-bottom disabled hidden" id="menu-bottom-closed">
+        <p class="mb-0"><b>Loja fechada no momento.</b></p>
+    </section>
+
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/item.js"></script>
+</body>
+</html>
