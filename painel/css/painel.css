@@ -1,0 +1,416 @@
+
+body {
+    background-color: var(--color-background);
+}
+
+
+/*Criando a pagina de login*/
+
+.login {
+    width: calc(100% - 20px);
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    flex: 1;
+    padding: 45px;
+    background-color: var(--color-secondary);
+}
+
+.icon-form {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 11px;
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.card-login img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.card-login input {
+    padding-left: 45px;
+}
+
+.btn-login {
+    padding: 11px;
+    font-size: 18px;
+}
+/*Ultimo elemento da pagina de login*/
+
+/*estilizando o menu-left (primeira section da pagina de home)*/
+
+.menu-left {
+    width: 250px;
+    background-color: var(--color-secondary);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+}
+
+.menu-left .menus{
+    margin-top: 55px;
+}
+
+.menu-left .logo{
+    text-align: center;
+    margin-left: -25px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 30PX;
+    color: var(--color-black) !important;
+    text-decoration: none;
+}
+
+.menu-item i {
+    width: 18px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.menu-item.active {
+    background-color: var(--color-background);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.menu-item.active::before {
+    content: "";
+    height: 50px;
+    width: 25px;
+    background-color: transparent;
+    position: absolute;
+    border-top-left-radius: 25px;
+    box-shadow: 0 -25px 0 0 var(--color-background);
+    right: 0;
+    margin-top: -65px;
+    rotate: 180deg;
+}
+
+.menu-item.active::after {
+    content: "";
+    height: 50px;
+    width: 25px;
+    background-color: transparent;
+    position: absolute;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -25px 0 0 var(--color-background);
+    right: 0;
+    margin-top: 40px;
+}
+/*Ultimo elemento do menu-left (primeira section da pagina de home)*/
+
+/*estelizando o conteudo (menu-top) (primeira section da pagina de home)*/
+
+h1.title-page {
+    color: var(--color-black);
+    font-size: 20px;
+    flex: 1;
+}
+
+.container-right {
+    display: flex;
+    align-items: center;
+}
+
+.container-dados p {
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: right;
+    color: var(--color-black);
+    line-height: 15px;
+}
+
+.container-dados span {
+    font-size: 13px;
+    text-align: right;
+    color: var(--color-text-out);
+}
+
+.container-dados {
+    margin-right: 30px;
+}
+
+.conteudo {
+    padding-left: 270px;
+    padding-right: 15px;
+}
+
+.conteudo-inner {
+    margin-top: 50px;
+}
+/*Ultimo elemento do conteudo (menu-top) (primeira section da pagina de home)*/
+
+/*estilizando o conteudo (menus-pedido) pagina pedidos */
+
+.menus-pedido i {
+    margin-right: 5px;
+}
+
+.menus-pedido a {
+    margin-right: 10px;
+}
+
+.badge-total-pedidos {
+    display: inline-block;
+    background-color: var(--color-primary-out);
+    border-radius: 50px;
+    font-size: 14px;
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+/*Ultimo elemento do conteudo (menus-pedido) pagina pedidos*/
+
+/*Estilizando o conteudo da pagina de pedidos (numero-pedido)*/
+
+.numero-pedido {
+    font-size: 16px;
+}
+
+.card-pedido .dropdown{
+    float: right;
+}
+
+.info-pedido {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--color-black);
+}
+
+.info-pedido i {
+    width: 25px;
+    text-align: center;
+}
+
+.info-pedido span {
+    display: block;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.separate {
+    height: 1px;
+    background-color: var(--color-text-out);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.horario-pedido {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.total-pedido {
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 15px;
+    color: var(--color-primary);
+}
+
+.card-pedido {
+    box-shadow: 1px 0 15px 3px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 0;
+}
+
+.card-pedido::before { /*criando os gradeantes da parte do pedido de cima*/
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    top: -7px;
+    background: radial-gradient(circle, transparent, transparent 50%, #ffffff 50%, #ffffff 100%) -7px -8px / 16px 16px repeat-x;
+}
+
+.card-pedido::after { /*criando os gradeantes da parte do pedido de baixo*/
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    bottom: -7px;
+    background: radial-gradient(circle, transparent, transparent 50%, #ffffff 50%, #ffffff 100%) -15px 2px / 16px 16px repeat-x;
+}
+
+.card-pedido:hover {
+    background-color: var(--color-secondary);
+} 
+
+.card-pedido:hover::before , .card-pedido:hover::after{
+    background-image: radial-gradient(circle, transparent, transparent 50%, var(--color-secondary), 50%, var(--color-secondary) 100% );
+}
+
+.card-content {
+    cursor: pointer;
+}
+
+.card-pedido-body {
+    height: 140px;
+}
+/*Ultimo elemento do conteudo (numero-pedido) pagina pedidos*/
+
+/*estilizando a div (modalDetalhes) na pagina de pedidos*/
+
+.modal-content {
+    background: transparent;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 0;
+    background-color: var(--color-background);
+    border-radius: 0;
+}
+
+.modal-header::before { /*criando os gradeantes da parte do pedido de cima (modalDetalhes)*/
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    top: -8px;
+    background: radial-gradient(circle, transparent, transparent 50%, var(--color-background) 50%, var(--color-background) 100%) -7px -8px / 16px 16px repeat-x;
+}
+
+.modal-title {
+    font-size: 18px;
+    color: var(--color-black);
+}
+
+.modal-title .horario-pedido {
+    font-size: 14px;
+    color: var(--color-text);
+    padding-left: 15px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.container-dados-pedido {
+    padding: 20px;
+    padding-bottom: 25px;
+    background-color: var(--color-background);
+}
+
+.container-dados-pedido .d-flex {
+    justify-content: space-between;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.container-dados-pedido .info-pedido {
+    font-size: 14px;
+    color: var(--color-text);
+}
+
+.fa-location-arrow {
+    color: var(--color-primary);
+    font-size: 17px;
+}
+
+.container-itens-pedido {
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+.container-itens-pedido .card-item {
+    padding: 5px 0 10px 0;
+    border-bottom: 1px dashed #cdcdcd;
+}
+.container-itens-pedido .card-item:last-child {
+    border: none;
+}
+
+.container-itens-pedido::after { /*criando os gradeantes da parte do pedido de baixo*/
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    margin-top: 17px;
+    background: radial-gradient(circle, transparent, transparent 50%, #ffffff 50%, #ffffff 100%) -15px 2px / 16px 16px repeat-x;
+}
+
+.footer-btn {
+    display: flex;
+    justify-content: end;
+}
+/*Ultimo elemento da div (modalDetalhes) na pagina de pedidos*/
+
+/*estelizando o categorias cardapio da pagina de cardapios*/
+
+.card-drag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag-icon {
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 35px;
+    cursor: grab;
+}
+
+.card-drag .infos {
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.card-drag .infos .name {
+    color: var(--color-black) !important;
+    text-decoration: none !important;
+}
+
+.actions {
+    display: flex;
+}
+
+.icon-action {
+    margin-left: 10px;
+    font-size: 16px;
+    color: var(--color-black) !important;
+    text-decoration: none !important;
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-white);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: var(--box-shadow) !important;
+}
+/*Ultimo elemento categorias cardapio da pagina de cardápios*/
+
+
+
+
+

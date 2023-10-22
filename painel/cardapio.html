@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Pizzaria Maluca</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/painel.css">
+
+</head>
+<body>
+
+<!--criando o painel de pedidos-->
+<section class="bg-menu">
+
+    <div class="menu-left">
+
+        <div class="logo">
+            <img src="../img/logo.png" width="100">
+        </div>
+
+        <div class="menus">
+
+            <a href="./home.html" class="menu-item">
+                <i class="fas fa-home"></i> Inicio
+            </a>
+
+            <a href="./pedidos.html" class="menu-item ">
+                <i class="fas fa-utensils"></i> Pedidos
+            </a>
+
+            <a href="./cardapio.html" class="menu-item active">
+                <i class="fas fa-book-open"></i> Cardápio
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fas fa-cog"></i> Configurações
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fas fa-building"></i> Empresa
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fas fa-chart-line"></i> Relatorio
+            </a>
+        </div>
+
+    </div>
+
+    <div class="conteudo">
+
+        <div class="menu-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center mt-4">
+
+                        <h1 class="title-page">
+                            <b>
+                                <i class="fas fa-book"></i>&nbsp; Edição do Cardápio
+                            </b>
+                        </h1>
+
+                        <div class="container-right">
+                            <div class="container-dados">
+                                <p>Pizzaria Maluca</p>
+                                <span>Pizzariamaluca@contato.com</span>
+                            </div>
+                            <a href="#" class="btn btn-white btn-sm">
+                                <i class="fas fa-sign-out-alt"></i>&nbsp; Sair
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="conteudo-inner">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12" id="categorias">
+
+                        <div class="container-group mb-5">
+
+                            <p class="title-categoria mb-0">
+                                <b>Categorias do cardápio</b>
+                            </p>
+
+                            <div class="accordion" id="categoriasMenu">
+
+                                <div class="card mt-3">
+                                    <div class="card-drag" id="headingOne">
+
+                                        <div class="drag-icon">
+                                            <i class="fas fa-ellipsis-v"></i>
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </div>
+
+                                        <div class="infos">
+                                            <a href="#" class="name mb-0" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <span class="me-2">
+                                                    <i class="fas fa-pizza-slice"></i>
+                                                </span>
+                                                <b>Pizzas Tradicionais</b>
+                                            </a>
+                                        </div>
+
+                                        <div class="actions">
+
+                                            <a href="#" class="icon-action">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
+
+                                            <a href="#" class="icon-action">
+                                                <i class="far fa-copy"></i>
+                                            </a>
+
+                                            <a href="#" class="icon-action">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</section>
+
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+
+</body>        
