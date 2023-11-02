@@ -158,6 +158,16 @@ section.categoria {
     box-shadow: var(--box-shadow);
 }
 
+.btn-red {
+    border: none !important;
+    background-color: var(--color-red);
+    color: var(--color-white) !important;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 20px;
+    box-shadow: var(--box-shadow);
+}
+
 .btn-sm {
     padding: 8px 13px;
     border-radius: 15px;
@@ -620,6 +630,10 @@ textarea {
 
 .color-primary {
     color: var(--color-primary);
+}
+
+.color-green {
+    color: #07883d !important;
 }
 
 .card-address {

@@ -458,7 +458,7 @@ h1.title-page {
 }
 /*Ultimo elemento categorias cardapio da pagina de cardápios*/
 
-/*estilizando a pagina de configurações (Delivvery e retirada)*/
+/*estilizando a pagina de configurações*/
 
 .menus-config i {
     margin-right: 5px;
@@ -585,7 +585,114 @@ input:checked + .slider::before {
 
 /*ultimo elemento com taxa fixa */
 
-/*Ultimo elemento da pagina de configurações (Delivvery e retirada)*/
+/*elemento da tabela de taxa por distancia*/
+
+.table {
+    font-size: 15px;
+}
+
+.table td {
+    color: var(--color-text);
+    vertical-align: middle;
+}
+
+.badge {
+    padding: 10px 15px;
+    border-radius: 50px;
+}
+
+.badge-success {
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+}
+
+.badge-danger {
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+}
+
+.color-red {
+    color: var(--color-red) !important;
+}
+
+/*ultimo elemento da tabela de taxa por distancia*/
+
+.opacity-05 {
+    opacity: 0.5;
+}
+
+/*Ultimo elemento da pagina de configurações*/
  
+/*estilizando a pagina da empresa*/
 
 
+/* estilizando sobre a empresa*/
+
+.logo-empresa .container-img-sobre {
+    position: relative;
+    margin-top: 0;
+    width: 110px;
+    height: 110px;
+    right: 0;
+    margin-right: 30px;
+}
+
+.logo-empresa .icon-action {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+}
+
+.detalhes-empresa {
+    flex: 1;
+}
+
+.detalhes-empresa textarea {
+    height: 250px !important;
+}
+/*ulrimo elemento do sobre*/
+
+.container-cep .form-control {
+    padding-right: 75px;
+}
+
+.container-cep .btn {
+    float: right;
+    margin-top: -45px;
+    margin-right: 10px;
+}
+
+/*estilizando o horario*/
+
+.horario .form-control {
+    height: 52px;
+}
+
+.horario .btn-red {
+    margin-top: 30px;
+}
+
+/*ultimo elelemento do horario*/
+
+/*ultimo elemento da pagina da empresa*/
+
+/*Estilizando a pagina de relatorios*/
+
+/*estilizando o faturamento*/
+
+.value-card {
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+/*ultimo elemento de faturamento*/
+
+/*estilizando o historico*/
+
+.card-table, .data-table {
+    font-size: 14px !important;
+}
+
+/*ultimo elemento do historico*/
+
+/*Ultimo elemento da pagina de relatorios*/
