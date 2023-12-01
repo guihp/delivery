@@ -6,5 +6,5 @@ server.get('/*', restify.plugins.serveStatic({
 }));
 
 server.listen(config.port, () => {
-    console.log(`Ambiente: ${config.ambiente} URL: ${config.url} port: ${config.port}`);
+    console.log(`Ambiente: ${config.ambiente} URL:${config.url}port:${config.port}`);
 });
