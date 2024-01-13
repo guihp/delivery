@@ -1,19 +1,16 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-
-    login.event.init()
-
+document.addEventListener("DOMContentLoaded", function (event) {
+    login.event.init();
 });
-
 
 var login = {};
 
 login.event = {
 
     init: () => {
-      
-        document.querySelector("#btnLogin").addEventListener("click", () => {
+
+        document.querySelector("#btnLogin").onclick = () => {
             login.method.validarLogin();
-        });
+        }
 
     }
 
@@ -21,31 +18,29 @@ login.event = {
 
 login.method = {
 
-    // aqui vai validar se os campos de login estão prenchidos
+    // Valida os campos
     validarLogin: () => {
 
         let email = document.querySelector("#txtEmailLogin").value.trim();
         let senha = document.querySelector("#txtSenhaLogin").value.trim();
 
-
         if (email.length == 0) {
-            alert("Informe o e-mail, por favor!")
+            app.method.mensagem("Informe o e-mail, por favor.");
             document.querySelector("#txtEmailLogin").focus();
             return;
         }
 
         if (senha.length == 0) {
-            alert("Informe a senha, por favor!")
+            app.method.mensagem("Informe a senha, por favor.");
             document.querySelector("#txtSenhaLogin").focus();
             return;
         }
 
-
-        login.method.login(email, senha)
+        login.method.login(email, senha);
 
     },
 
-// aqui o metodo que vai validar o login (via api)
+    // método que faz o login (via API)
     login: (email, senha) => {
 
         var dados = {
@@ -53,16 +48,22 @@ login.method = {
             senha: senha
         }
 
-        app.method.post('/login', JSON.stringify(dados), 
-        (response) => {
-            console.log(response)
-        }, 
-        (error) => {
-            console.log(error)
-        }, true
+        app.method.post('/login', JSON.stringify(dados),
+            (response) => {
+
+                if (response.status == 'error') {
+                    app.method.mensagem(response.message);
+                    return;
+                }
+
+                
+
+            },
+            (error) => {
+                console.log(error);
+            }, true
         )
 
-    },
-
+    }
 
 }

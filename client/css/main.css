@@ -56,6 +56,31 @@ b {
     background-color: var(--color-secondary);
 }
 
+.container-mensagens {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    opacity: 1!important;
+    width: auto;
+    color: var(--color-white);
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.toast.red {
+    background-color: var(--color-red);
+}
+
+.toast.green {
+    background-color: var(--color-green);
+}
+
 .width-fix {
     width: calc(100% - 20px);
     max-width: 800px;
