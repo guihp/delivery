@@ -1,35 +1,35 @@
-// fai strin (navegar entre as pastas)
-var fs = require('fs')
+var fs = require("fs");
 
-module.exports = class ReadCommandSql{
+module.exports = class ReadCommandSql {
+
     async retornaStringSql(chave, controller) {
 
-        var commandRegex = '';
+        var commandoRegex = '';
 
-        try {
-            await new Promise(async (resolve) =>{
+        try
+        {
+            await new Promise(async (resolve) => {
 
-                await fs.readFile(`./server/scripts/${controller}.sql`, function(err, buf){
-                    if(err) {
-                        console.log(err);
-                        resolve();
-                    }
-
+                await fs.readFile(`./server/scripts/${controller}.sql`, function (err, buf) {
+                    if (err) { console.log(err); resolve(); }
+                    
                     var str = buf.toString();
                     var regex = new RegExp(`^--INIT#${chave}#(.*?)^--END#${chave}#`, "sm");
 
-                    commandRegex = str.match(regex);
-                    commandRegex = commandRegex[0].toString().replace(`--INIT#${chave}#`, '').replace(`--END#${chave}#`, '')
-                    resolve();
-                })
-            
-
-            });
-        } catch (error) {
-            
+                    commandoRegex = str.match(regex);
+                    commandoRegex = commandoRegex[0].toString().replace(`--INIT#${chave}#`, '').replace(`--END#${chave}#`, '');
+                    
+                    resolve();                
+                });
+    
+            })
+        }
+        catch (ex) {
+            console.log('Erro retornaStringSql: ', ex);
         }
 
+        return commandoRegex;
 
-            return commandRegex;
     }
+
 }

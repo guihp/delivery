@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "delivery",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsonwebtoken": "^9.0.2",
+    "googleapis": "^122.0.0",
+    "jsonwebtoken": "^9.0.1",
+    "mv": "^2.1.1",
     "mysql": "^2.18.1",
     "node-schema-object": "^3.3.4",
     "recursive-readdir": "^2.2.3",

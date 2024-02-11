@@ -9,7 +9,7 @@ login.event = {
     init: () => {
 
         document.querySelector("#btnLogin").onclick = () => {
-            login.method.validarLogin();
+            login.method.validaLogin();
         }
 
     }
@@ -18,20 +18,19 @@ login.event = {
 
 login.method = {
 
-    // Valida os campos
-    validarLogin: () => {
+    validaLogin: () => {
 
         let email = document.querySelector("#txtEmailLogin").value.trim();
         let senha = document.querySelector("#txtSenhaLogin").value.trim();
 
         if (email.length == 0) {
-            app.method.mensagem("Informe o e-mail, por favor.");
+            app.method.mensagem("Informe o E-mail, por favor", 'red', 3000);
             document.querySelector("#txtEmailLogin").focus();
             return;
         }
 
         if (senha.length == 0) {
-            app.method.mensagem("Informe a senha, por favor.");
+            app.method.mensagem("Informe a Senha, por favor", 'red', 3000);
             document.querySelector("#txtSenhaLogin").focus();
             return;
         }
@@ -40,7 +39,6 @@ login.method = {
 
     },
 
-    // método que faz o login (via API)
     login: (email, senha) => {
 
         var dados = {
@@ -50,20 +48,33 @@ login.method = {
 
         app.method.post('/login', JSON.stringify(dados),
             (response) => {
+                console.log(response)
 
                 if (response.status == 'error') {
                     app.method.mensagem(response.message);
                     return;
                 }
 
-                
+                if (response.status == "success") {
+
+                    app.method.gravarValorSessao(response.TokenAcesso, "token")
+                    app.method.gravarValorSessao(response.Nome, "Nome")
+                    app.method.gravarValorSessao(response.Email, "Email")
+                    app.method.gravarValorSessao(response.Logo, "Logo")
+
+                    window.location.href = '/painel/home.html';
+
+                }
 
             },
-            (error) => {
-                console.log(error);
+            (xhr, ajaxOptions, error) => {
+                console.log('xhr', xhr)
+                console.log('ajaxOptions', ajaxOptions)
+                console.log('error', error)
             }, true
         )
 
     }
 
 }
+
